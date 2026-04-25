@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Triven Ayurveda - माइग्रेन और आधे सिर के दर्द के लिए अनुभवी आयुर्वेदिक सलाह और उपचार योजना।" />
+  <title>Triven Ayurveda | माइग्रेन देखभाल केंद्र</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header" id="home">
+    <div class="container nav-container">
+      <a href="#home" class="logo" aria-label="Triven Ayurveda Home">
+        <span class="logo-mark">त्रि</span>
+        <span class="logo-text-wrap">
+          <span class="logo-main">TRIVEN</span>
+          <span class="logo-sub">AYURVEDA CARE</span>
+        </span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="मेन्यू खोलें">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="navMenu">
+        <a href="#home">होम</a>
+        <a href="#doctor">डॉक्टर</a>
+        <a href="#symptoms">लक्षण</a>
+        <a href="#plan">उपचार योजना</a>
+        <a href="#reviews">राय</a>
+        <a href="#formTop" class="nav-cta">अभी परामर्श लें</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-form-section" id="order">
+    <div class="container hero-shell">
+      <div class="hero-copy">
+        <p class="hero-kicker">सिर्फ दर्द नहीं, जीवन की रफ्तार वापस</p>
+        <h1>माइग्रेन और आधे सिर के दर्द का भरोसेमंद आयुर्वेदिक समाधान</h1>
+        <p class="hero-sub">
+          अनुभवी डॉक्टर की सलाह, वैयक्तिकृत दवा योजना, और पूरे भारत में होम डिलीवरी।
+        </p>
+        <div class="hero-meta">
+          <div class="meta-item">
+            <strong>4.85/5</strong>
+            <span>97,000+ रेटिंग</span>
+          </div>
+          <div class="meta-item">
+            <strong>2,00,000+</strong>
+            <span>संतुष्ट मरीज</span>
+          </div>
+          <div class="meta-item">
+            <strong>30 दिन</strong>
+            <span>निरंतर फॉलो-अप</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-grid">
+        <div class="form-wrap" id="formTop">
+          <div class="form-header">
+            <h2>अपनी समस्या बताएं</h2>
+            <p>हमारी टीम जल्द कॉल करके उपचार की सही दिशा बताएगी।</p>
+            <a href="tel:+917309523829" class="btn btn-call">अब कॉल करें</a>
+          </div>
+          <form id="orderForm" novalidate>
+            <div class="form-group">
+              <label for="fullName">आपका नाम</label>
+              <input type="text" id="fullName" placeholder="उदा. राकेश कुमार" />
+              <span class="error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="mobile">मोबाइल नंबर</label>
+              <input type="tel" id="mobile" maxlength="10" placeholder="10 अंकों का नंबर" />
+              <span class="error" id="mobileError"></span>
+            </div>
+            <div class="form-group">
+              <label for="duration">समस्या कब से है?</label>
+              <input type="text" id="duration" placeholder="उदा. 6 महीने, 2 साल" />
+              <span class="error" id="durationError"></span>
+            </div>
+            <div class="form-group">
+              <label class="checkbox-group-label">आपको इनमें से क्या महसूस होता है?</label>
+              <div class="checkbox-group">
+                <label class="cb-label"><input type="checkbox" name="symptoms" value="आधे सिर में दर्द" />आधे सिर में दर्द</label>
+                <label class="cb-label"><input type="checkbox" name="symptoms" value="उल्टी या जी मिचलाना" />उल्टी या जी मिचलाना</label>
+                <label class="cb-label"><input type="checkbox" name="symptoms" value="प्रकाश से परेशानी" />प्रकाश से परेशानी</label>
+                <label class="cb-label"><input type="checkbox" name="symptoms" value="चिड़चिड़ापन" />चिड़चिड़ापन</label>
+                <label class="cb-label"><input type="checkbox" name="symptoms" value="चक्कर" />चक्कर</label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-submit-dark btn-full">
+              <span>अपनी जानकारी भेजें</span>
+            </button>
+          </form>
+        </div>
+
+        <aside class="doctor-col" id="doctor" aria-label="Doctor Profile">
+          <img
+            class="doctor-photo"
+            src="assests/Doctor2.png"
+            alt="आयुर्वेदिक चिकित्सक की प्रोफाइल फोटो"
+            loading="lazy"
+          />
+          <div class="doctor-info">
+            <p class="doctor-label">मुख्य सलाहकार</p>
+            <h3>Dr. Arvind Yadav</h3>
+            <p class="doctor-tagline">माइग्रेन और क्रॉनिक सिरदर्द देखभाल विशेषज्ञ</p>
+            <ul class="feature-list">
+              <li>व्यक्तिगत केस हिस्ट्री पर आधारित उपचार</li>
+              <li>ऑनलाइन और क्लिनिक दोनों विकल्प</li>
+              <li>दवा + डाइट + लाइफस्टाइल गाइड एक ही योजना में</li>
+              <li>पूरे भारत में सुरक्षित होम डिलीवरी</li>
+            </ul>
+            <div class="online-status">
+              <span class="online-dot"></span>
+              विशेषज्ञ टीम अभी उपलब्ध है
+            </div>
+            <a href="tel:+917309523829" class="btn btn-call btn-call-lg">डॉक्टर से बात करें</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="symptoms-section section" id="symptoms">
+    <div class="container">
+      <p class="section-eyebrow">लक्षण</p>
+      <h2 class="serif-title">ये संकेत दिख रहे हों तो परामर्श लें</h2>
+      <p class="section-sub">शुरुआत में सही इलाज मिलने से लंबे समय की परेशानी रोकी जा सकती है।</p>
+      <div class="symptoms-grid">
+        <article class="symptom-card">सिर के एक हिस्से में धड़कता हुआ दर्द</article>
+        <article class="symptom-card">तेज रोशनी या आवाज में दर्द बढ़ना</article>
+        <article class="symptom-card">उल्टी, मतली या अचानक कमजोरी महसूस होना</article>
+        <article class="symptom-card">आंखों के आगे धुंधलापन या चमक दिखना</article>
+        <article class="symptom-card">काम के दौरान चिड़चिड़ापन और ध्यान भटकना</article>
+        <article class="symptom-card">कम नींद या तनाव के बाद दर्द का ट्रिगर होना</article>
+      </div>
+    </div>
+  </section>
+
+  <section class="plan-section section" id="plan">
+    <div class="container plan-container">
+      <div class="plan-visual">
+        <img
+          src="assests/Doctor1.png"
+          alt="आयुर्वेदिक औषधि और जड़ी-बूटियां"
+          loading="lazy"
+        />
+      </div>
+      <div class="plan-text-col">
+        <p class="section-eyebrow left-align">उपचार योजना</p>
+        <h2 class="serif-title left-align">आपकी देखभाल का पूरा रोडमैप</h2>
+        <p class="plan-sub">हर केस में एक ही दवा नहीं, आपकी स्थिति के हिसाब से चरणबद्ध योजना बनती है।</p>
+        <ul class="plan-steps">
+          <li>1. कॉल पर विस्तृत लक्षण और मेडिकल हिस्ट्री समझी जाती है।</li>
+          <li>2. डॉक्टर द्वारा उपयुक्त दवा और अवधि तय की जाती है।</li>
+          <li>3. कूरियर से दवा और डाइट गाइड भेजी जाती है।</li>
+          <li>4. 7-10 दिन के अंतराल पर फॉलो-अप किया जाता है।</li>
+          <li>5. सुधार के आधार पर योजना में समायोजन किया जाता है।</li>
+        </ul>
+        <a href="tel:+917309523829" class="btn btn-call btn-call-lg">परामर्श शुरू करें</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-section section" id="why">
+    <div class="container">
+      <p class="section-eyebrow">क्यों ट्रिवेन</p>
+      <h2 class="serif-title">यहां इलाज में अनुशासन और निरंतरता मिलती है</h2>
+      <p class="section-sub">सिर्फ एक दवा नहीं, पूरे उपचार अनुभव पर ध्यान दिया जाता है।</p>
+      <div class="why-grid">
+        <article class="why-card">
+          <h3>गोपनीय परामर्श</h3>
+          <p>आपकी जानकारी सुरक्षित रखी जाती है और केस को निजी तौर पर संभाला जाता है।</p>
+        </article>
+        <article class="why-card">
+          <h3>भारतभर डिलीवरी</h3>
+          <p>समय पर पैकिंग और ट्रैकिंग के साथ दवा आपके घर तक पहुंचती है।</p>
+        </article>
+        <article class="why-card">
+          <h3>जड़ पर फोकस</h3>
+          <p>ट्रिगर, जीवनशैली और पाचन संतुलन पर साथ में काम किया जाता है।</p>
+        </article>
+        <article class="why-card">
+          <h3>नियमित फॉलो-अप</h3>
+          <p>इलाज के दौरान आपकी प्रतिक्रिया के आधार पर योजना अपडेट होती रहती है।</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews-section section" id="reviews">
+    <div class="container">
+      <p class="section-eyebrow">मरीजों की राय</p>
+      <h2 class="serif-title"><span class="count-big">15,000+</span> लोगों ने राहत बताई</h2>
+      <p class="section-sub">ये प्रतिक्रियाएं उन लोगों की हैं जिन्हें लंबे समय से माइग्रेन था।</p>
+      <div class="reviews-grid">
+        <article class="review-card">
+          <p>"3 साल से माइग्रेन था। यहां की योजना से एक महीने में अटैक की तीव्रता काफी कम हुई।"</p>
+          <div class="reviewer"><strong>राहुल शर्मा</strong><small>दिल्ली</small></div>
+        </article>
+        <article class="review-card">
+          <p>"दवा समय पर मिली और डॉक्टर ने हर फॉलो-अप में बदलाव समझाकर दिया। अब सिरदर्द कंट्रोल में है।"</p>
+          <div class="reviewer"><strong>प्रिया मेहता</strong><small>मुंबई</small></div>
+        </article>
+        <article class="review-card">
+          <p>"रोशनी में दर्द बढ़ता था, अब पहले से बहुत सुधार है। टीम का सपोर्ट अच्छा लगा।"</p>
+          <div class="reviewer"><strong>अमित वर्मा</strong><small>बेंगलुरु</small></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="offer-section">
+    <div class="container offer-inner">
+      <div class="offer-text">
+        <p class="offer-badge">सीमित समय ऑफर</p>
+        <h2>आज परामर्श योजना पर <span>विशेष छूट</span></h2>
+        <p>दवा के साथ डाइट गाइड और फॉलो-अप सहायता शामिल है।</p>
+        <a href="#formTop" class="btn btn-white">अभी जानकारी भरें</a>
+      </div>
+      <div class="countdown-wrap" aria-live="polite">
+        <p class="countdown-label">ऑफर समाप्त होने में</p>
+        <div class="countdown">
+          <div class="time-block"><span id="hours">00</span><small>घंटे</small></div>
+          <div class="sep">:</div>
+          <div class="time-block"><span id="minutes">00</span><small>मिनट</small></div>
+          <div class="sep">:</div>
+          <div class="time-block"><span id="seconds">00</span><small>सेकंड</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-logo">TRIVEN AYURVEDA CARE</p>
+      <p>© 2026 Triven Ayurveda. सर्वाधिकार सुरक्षित।</p>
+      <p>support@trivenayurveda.in | +91 98765 43210</p>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" id="stickyCta">
+    <a href="#formTop" class="btn btn-primary btn-full">अभी परामर्श बुक करें</a>
+  </div>
+
+  <a href="https://wa.me/919876543210?text=नमस्ते%2C%20मुझे%20माइग्रेन%20के%20इलाज%20के%20बारे%20में%20जानकारी%20चाहिए" class="whatsapp-btn" target="_blank" rel="noopener" aria-label="WhatsApp">
+    WA
+  </a>
+
+  <div class="call-bar" id="callBar">
+    <span class="online-dot">
+      <img src="assests/pu1.png" alt="">
+    </span>
+    <span>विशेषज्ञ टीम ऑनलाइन है</span>
+    <a href="tel:+919876543210" class="btn btn-call">कॉल करें</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
