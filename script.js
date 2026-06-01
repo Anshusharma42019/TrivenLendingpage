@@ -36,6 +36,20 @@ if (navToggle && navMenu) {
   update();
 })();
 
+// ── Live count hook ──
+(function liveCountHook() {
+  const el = document.getElementById("liveCount");
+  if (!el) return;
+
+  function update() {
+    const base = 18 + Math.floor(Math.random() * 25); // 18–42
+    el.textContent = base;
+    setTimeout(update, 3000 + Math.random() * 5000); // every 3–8 sec
+  }
+
+  setTimeout(update, 4000);
+})();
+
 window.addEventListener("DOMContentLoaded", () => {
   const formTop = document.getElementById("formTop");
   if (formTop) {
