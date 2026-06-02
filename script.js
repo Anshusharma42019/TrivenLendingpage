@@ -15,7 +15,23 @@ if (navToggle && navMenu) {
 
   if (!hoursEl || !minutesEl || !secondsEl) return;
 
-  const end = Date.now() + 5 * 3600000 + 47 * 60000 + 33000;
+  // Persist end time across page reloads, reset each day at midnight
+  const STORAGE_KEY = "triven_offer_end";
+  const now = Date.now();
+  const todayMidnight = new Date();
+  todayMidnight.setHours(23, 59, 59, 999);
+  const midnightTs = todayMidnight.getTime();
+
+  let stored = parseInt(localStorage.getItem(STORAGE_KEY) || "0", 10);
+  // If stored end is in the past or beyond today's midnight, reset
+  if (!stored || stored <= now || stored > midnightTs) {
+    // Random end time between 3h and 7h from now, capped at midnight
+    const randomDuration = (3 + Math.random() * 4) * 3600000;
+    stored = Math.min(now + randomDuration, midnightTs);
+    localStorage.setItem(STORAGE_KEY, stored);
+  }
+
+  const end = stored;
 
   function update() {
     const diff = end - Date.now();
@@ -180,6 +196,8 @@ if (form) {
       }
 
       form.reset();
+      // Fire Facebook Lead event on successful submission
+      if (typeof fbq === 'function') fbq('track', 'Lead');
       window.location.href = "thankyou.html";
     } catch (error) {
       console.error("Lead submit error:", error);

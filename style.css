@@ -249,8 +249,8 @@ a {
 .hero-bottom-img {
   display: block;
   width: 100%;
-  max-width: 440px;
-  max-height: 220px;
+  max-width: 680px;
+  max-height: 380px;
   margin: 1.2rem auto 0;
   border-radius: 12px;
   object-fit: contain;
@@ -1079,6 +1079,84 @@ a {
   }
 }
 
+/* ── Trust Badges ── */
+.trust-badges {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.trust-badge {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+/* ── FAQ Section ── */
+.faq-section {
+  background: var(--bg-alt);
+}
+
+.faq-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.faq-item {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem 1.4rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.faq-item summary {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-right: 2rem;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  color: var(--brand);
+  transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+  content: '−';
+}
+
+.faq-item p {
+  margin-top: 0.8rem;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 /* ══ DESKTOP ≥960px ══ */
 @media (min-width: 960px) {
   .hero-shell {
@@ -1679,3 +1757,78 @@ a {
   }
 }
 
+
+/* ── Symptom Card Icons ── */
+.sc-icon {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.symptom-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ── Why Card Icons ── */
+.why-icon {
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+  line-height: 1;
+  display: block;
+}
+
+.why-card {
+  text-align: center;
+}
+
+/* ── Review Stars ── */
+.review-stars {
+  color: #f59e0b;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.6rem;
+}
+
+/* ── Gallery 2x2 grid for 4 images ── */
+.gallery-grid-4 {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+@media (max-width: 560px) {
+  .gallery-grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* ── Sticky CTA btn-full fix ── */
+.btn-full {
+  width: 100%;
+}
+
+.sticky-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 54px;
+  z-index: 95;
+  padding: 0.5rem 1rem;
+  display: none;
+}
+
+.sticky-cta .btn-primary {
+  width: 100%;
+  max-width: 360px;
+  margin-inline: auto;
+  box-shadow: 0 -4px 24px rgba(4,120,87,0.3);
+}
+
+@media (max-width: 760px) {
+  .sticky-cta {
+    display: flex;
+    justify-content: center;
+  }
+}
