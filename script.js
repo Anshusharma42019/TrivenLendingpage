@@ -179,6 +179,7 @@ if (form) {
         throw new Error(serverMessage || `Submit failed with status ${response.status}`);
       }
 
+      form.reset();
       window.location.href = "thankyou.html";
     } catch (error) {
       console.error("Lead submit error:", error);
