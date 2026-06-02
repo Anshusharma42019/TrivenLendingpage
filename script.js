@@ -93,7 +93,7 @@ if (mobileInput) {
 }
 
 const form = document.getElementById("orderForm");
-const API_URL = "https://backend-triven-crm.vercel.app/api/v1/leads/submit";
+const API_URL = "https://backend-triven-crm.vercel.app/api/v1/leads/submit/migraine";
 
 function showError(id, msg) {
   const el = document.getElementById(id);
