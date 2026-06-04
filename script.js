@@ -93,14 +93,16 @@ if (mobileInput) {
 }
 
 const form = document.getElementById("orderForm");
-const API_URL = "https://backend-triven-crm.vercel.app/api/v1/leads/submit/migraine";
+const API_URL =
+  form?.dataset.endpoint ||
+  "https://backend-triven-crm.vercel.app/api/v1/leads/submit/migraine";
 
 function showError(id, msg) {
   const el = document.getElementById(id);
   if (el) el.textContent = msg;
 }
 
-function clearError(id) {
+function clearError(id) { 
   const el = document.getElementById(id);
   if (el) el.textContent = "";
 }
